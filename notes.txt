@@ -15,21 +15,3 @@ PROBLEMS:
 		-> #AAPL 00001 15000 50 172800000000 1
 			 *AAPL 00001 15000 50 172800000000 1
 			 stock_id_, order_id_, quantity, price, timestamp, status
-			 
-			 
-			 
-			 
-			 fl businesses app similar to yelp/instagram/threads
-			 aims to provide companies with the opportunity to reach out to their local but also 
-			 national/international audience posting updates, threads, community events etc.
-			 
-			 will track user population to provide not only companies but also tourists and residents with the 
-			 opportuntiy to help plan better family trips
-			 
-			 licenses cn be sold to businesses
-			 
-			 membership is sold to companies for 50$ a month with access to mayn features including support
-			 sponsorhips and adds provided through the app and sponsors of travel companies
-			 
-			 
-			 name: ??
