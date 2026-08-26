@@ -19,15 +19,17 @@ struct OrderInfo {
 		stock_id_ = stock.stock_id_; 
 	}
 	
-	bool operator<(const &OrderInfo other) const { // price-time stock market
+	// this < other SMALLER, other < this LARGER
+	bool operator<(const OrderInfo& other) const { // price-time stock market
+		if (type_ != other.type_) {
+			return type_ > other.type_;
+		}
 		if (encoded_price_ != other.encoded_price_) {
 			if (side_ == Side::SELL) {
 				return encoded_price_ > other.encoded_price_; // return lowest
 			} 
-			
 			return encoded_price_ < other.encoded_price_; // return highest
 		}
-		
 		return order_time_ > other.order_time_;
 	}
 };

@@ -4,19 +4,17 @@
 
 struct Stats {
 	uint32_t stock_id_; // ie: AAPL = 221814
-	uint16_t mean_; // average price
-	uint16_t std_dev_;
-	uint32_t volume_; // total shares traded
-	uint32_t trade_count_; // total completed matches
-	uint16_t last_price_; // most recent fulfilled price
-	uint16_t high_;
-	uint16_t low_;
-	uint16_t open_;
-	uint16_t close_;
+	double mean_ = 0; // average price
+	double std_dev_ = 0;
+	uint32_t volume_ = 0; // total shares traded
+	uint32_t trade_count_ = 0; // total completed matches
+	double last_price_ = 0; // most recent fulfilled price
+	double high_ = 0;
+	double low_ = 0;
+	double open_ = 0;
+	double close_ = 0;
 	
-	Stats(const StockInfo& stock) {
-		stock_id_ = stock.stock_id_;
-	}
+	Stats() = default;
 };
 
 /*

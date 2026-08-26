@@ -6,7 +6,6 @@
 struct StockInfo {
 	uint32_t stock_id_; // ie: AAPL = 221814
 	uint32_t quantity_; // total | both sides
-	uint16_t stock_price_; // avg price
 	Status status_;
 };
 
