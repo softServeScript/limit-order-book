@@ -6,7 +6,7 @@
 
 // prioritize user privacy. order_id_ tied to account
 struct OrderInfo {
-	uint32_t stock_id_; // ie: AAPL = 221814
+	uint32_t stock_id_; // ie: AAPL = 02021814
 	uint32_t order_id_; // min 5 figures (10,000)
 	uint16_t quantity_;
 	uint16_t encoded_price_; // divide by 100 for display price

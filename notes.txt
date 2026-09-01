@@ -15,3 +15,4 @@ PROBLEMS:
 		-> #AAPL 00001 15000 50 172800000000 1
 			 *AAPL 00001 15000 50 172800000000 1
 			 stock_id_, order_id_, quantity, price, timestamp, status
+8. 
