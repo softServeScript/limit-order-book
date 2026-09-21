@@ -4,8 +4,8 @@
 #include <cstdint>
 
 struct UserAcc {
-	std::string display_name_;
-	std::string password_;
+	std::string display_name_ = " ";
+	std::string password_ = " ";
 	double money_ = 1000000; // sum lite 
 	
  

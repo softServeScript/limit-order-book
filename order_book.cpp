@@ -41,7 +41,7 @@ void OrderBook::LoadFiles(const std::string& file_directory) {
 
 			ss >> a >> b >> c >> d >> e >> f >> g;
 			
-			uint8_t side = 0
+			uint8_t side = 0;
 			if (Ticker::map[0] != a[0]) side = 1;
 			a.erase(0, 1);
 			
@@ -77,7 +77,7 @@ void OrderBook::OrderBookAdd(uint8_t s, uint32_t s_id, uint32_t o_id, uint16_t q
 		oi.order_time_ = std::chrono::nanoseconds(t);			
 	}
 	
-	ua_.orders_.insert({o_id, oi*});
+	ua_.orders_.insert({o_id, &oi});
 
 	if (type_ == 2 || type_ == 3) { // STOP ORDERDS
 		if (s == 0) {
@@ -94,7 +94,7 @@ void OrderBook::OrderBookAdd(uint8_t s, uint32_t s_id, uint32_t o_id, uint16_t q
 	}
 }
 
-void OrderBook::CheckForStock(uint32_t s_id) {
+void OrderBook::CheckForStock(uint32_t s_id, uint16_t q) {
 	auto& stats = book_[s_id].s_;
 	auto& si = book_[s_id].si_;
 	

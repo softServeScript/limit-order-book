@@ -36,21 +36,18 @@ uint32_t CreateID(uint8_t fl){
 std::string DisplayStatus(uint8_t x) {
 	std::string word;
 	
-	if (x == 0) {
-		word = "OPEN";
+	switch (x) {
+		case 0:
+			word = "OPEN";
+		case 1:
+			word = "CANCELLED";
+		case 2:
+			word = "PARTIAL";
+		case 3:
+			word = "FILLED";
+		case 4:
+			word = "EXPIRED";
 	}
-	if (x == 1) {
-		word = "CANCELLED";
-	}	
-	if (x == 2) {
-		word = "PARTIAL";
-	}
-	if (x == 3) {
-		word = "FILLED";
-	}
-	else {
-		word = "EXPIRED";
-	}
-
+	
 	return word;
 }

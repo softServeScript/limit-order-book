@@ -10,10 +10,11 @@ struct OrderStatus {
 	double display_price_;
 	Status status_;
 	
-	void DisplayOrder(const OrderInfo& order) {
-		order_id_ = order.order_id_;
-		quantity_ = order.quantity_;
-		display_price_ = static_cast<double>(order.encoded_price_)/100.0;
-		status_ = order.status_;
-	}
+	// initializer list to avoid undefined behavior for display template 
+	OrderStatus(const OrderInfo& order)
+		: order_id_(order.order_id_)
+		, quantity_(order.quantity_)
+		, display_price_(static_cast<double>((order.encoded_price_)/100.0))
+		, status_(order.status_)
+	{}
 };

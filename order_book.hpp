@@ -31,8 +31,10 @@ class OrderBook {
 		void LoadFiles(const std::string& file_directory);		
 		void OrderBookAdd(uint8_t s, uint32_t s_id, uint32_t o_id, uint16_t q, uint16_t p, 
 											uint8_t status_, uint8_t type_, uint64_t t, UserAcc& ua_);
+		void CheckForStock(uint32_t s_id, uint16_t q);
 		void OrderBookCreate(UserAcc& ua_);
 		void MatchOrders(uint32_t stock_id_);
+		void StatusCheck(uint32_t stock_id_);
 		void UpdateStats(uint16_t encoded_price_);
 		void OrderStats(double& last_price_, uint32_t& trade_count_, double& ovr_mean_, double& m2_, double& std_dev_);
 		void ThreadProcess();
